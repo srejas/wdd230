@@ -1,0 +1,22 @@
+@media (min-width: 37rem) {
+    div {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
+        margin: 1rem 2rem;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+
+    h1 {
+        margin: 1rem 2rem;
+    }
+
+    .card {
+        box-shadow: 1px 1px 10px black;
+    }
+}

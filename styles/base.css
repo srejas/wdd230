@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer, h2 {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    box-shadow: 1px 1px 10px black;
+    margin: 0 2rem;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+nav {
+    background-color: lightgrey;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover {
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+}
+
+nav .active {
+    background-color: darksalmon;
+}
+
+h1 {
+    font-weight: 100;
+    border-bottom: 1px solid gray;
+    margin: 1rem 0.75rem;
+}
+
+div {
+    margin: 1rem 0.75rem;
+}
+
+div ul {
+    list-style-type: none;
+    margin: 1rem 0;
+}
+
+div li, div p {
+    padding: 0.25rem;
+}
+
+div p {
+    margin: 1rem 0;
+}
+
+.card {
+    border: 1px solid gray;
+    margin: 1rem 0;
+    border-radius: 5px;
+}
+
+footer {
+    font-weight: 100;
+}
+
+#lastModified {
+    color: yellow;
+}

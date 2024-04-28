@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Site</title>
+    <title>Spencer Rejas - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal for Spencer Rejas">
+    <meta name="author" content="Spencer Rejas">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>This is a test</h1>
+    <header>
+        <img src="images/profile.jpg" alt="Spencer Rejas profile" width="75" height="100"><span>Spencer Rejas</span>
+    </header>
+    <nav>
+        <ul>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>WDD 230: Web Frontend Development</h1>
+        <div>
+            <section class="card">
+                <h2>Learning Activities</h2>
+                <ul>
+                    <li>Week 01:<a href="#"></a></li>
+                    <li>Week 02:<a href="#"></a></li>
+                    <li>Week 03:<a href="#"></a></li>
+                    <li>Week 04:<a href="#"></a></li>
+                    <li>Week 05:<a href="#"></a></li>
+                    <li>Week 06:<a href="#"></a></li>
+                </ul>
+            </section>
+            <section class="card">
+                <h2>Information</h2>
+                <p>Location</p>
+                <p>The Weather is...</p>
+                <p>Page Visits: ??</p>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="footerDate">2024</span> | Spencer Rejas | Utah 🇺🇸</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
 </body>
 </html>

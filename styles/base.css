@@ -78,6 +78,10 @@ div p {
     border-radius: 5px;
 }
 
+.card a {
+    margin: 0 0.5rem;
+}
+
 footer {
     font-weight: 100;
 }

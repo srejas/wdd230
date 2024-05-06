@@ -6,6 +6,9 @@
     <title>Spencer Rejas - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="WDD 230 - Web Frontend Development course assignment portal for Spencer Rejas">
     <meta name="author" content="Spencer Rejas">
+
+    <link rel="icon" href="favicon.ico">
+
     <link href="styles/normalize.css" rel="stylesheet">
     <link href="styles/base.css" rel="stylesheet">
     <link href="styles/larger.css" rel="stylesheet">
@@ -13,8 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="favicon.ico">
 
     <meta property="og:title" content="Spencer Rejas - WDD 230 Course Homepage">
     <meta property="og:type" content="website">
@@ -24,9 +25,11 @@
 <body>
     <header>
         <img src="images/profile.jpg" alt="Spencer Rejas profile" width="75" height="100"><span>Spencer Rejas</span>
+        <button id="darkMode">☾</button>
     </header>
-    <nav>
-        <ul>
+    <nav id="animated-menu">
+    <button id="dropdown-button"></button>
+        <ul class="dropdown-menu">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">Chamber</a></li>
             <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
@@ -60,5 +63,7 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/dropdownMenu.js"></script>
+    <script src="scripts/darkMode.js"></script>
 </body>
 </html>

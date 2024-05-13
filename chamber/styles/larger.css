@@ -1,0 +1,44 @@
+@media (min-width: 32rem) {
+    #menu {
+        display: none;
+    }
+    
+    .navigation, .navigation.open {
+        display: flex;
+        margin-left: 30%;
+    }
+
+    .navigation li {
+        flex: 1 1 auto;
+    }
+
+    .hero a {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
+    }
+
+    #weather {
+       margin-right: 1rem;
+       margin-top: 3rem;
+       text-align: left;
+    }
+
+    #spotlights {
+        text-align: center;
+    }
+
+    #spotlights img {
+        display: inline;
+        justify-content: space-around;
+    }
+
+    .connections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

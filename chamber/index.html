@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 230 - Daybreak Chamber of Commerce</title>
+    <meta name="description" content="The Daybreak Chamber of Commerce will be the digital platform by which the businesses in the chamber can market and promote their local businesses, providing information that 
+    interested parties would find helpful. The visits to the site will directly correlate 
+    with the growth of the businesses and will help to grow the community economy.">
+    <meta name="author" content="Spencer Rejas">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;500;900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="WDD 230 - Daybreak Chamber of Commerce project">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1462900157664-3ecc405a9341?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://srejas.github.io/wdd230/chamber/index.html">
+</head>
+<body>
+    <header>
+        <h1>Daybreak Chamber of Commerce</h1>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/hero-meduim.webp" media="(max-width: 900px)">
+                <img src="images/hero-large.webp" alt="Conducting business at table outside" width="1500" height="650">
+            </picture>
+            <a href="#">Join the chamber</a>
+        </div>
+        <div class="cards">
+            <section id="events">
+                <h2>Events</h2>
+                    <h3>Event 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quis explicabo illum dolorem similique nemo praesentium error id quasi earum architecto cupiditate maxime repellat non? A necessitatibus modi voluptatum ducimus.</p>
+                    <h3>Event 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quis explicabo illum dolorem similique nemo praesentium error id quasi earum architecto cupiditate maxime repellat non? A necessitatibus modi voluptatum ducimus.</p>
+                    <h3>Event 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, quis explicabo illum dolorem similique nemo praesentium error id quasi earum architecto cupiditate maxime repellat non? A necessitatibus modi voluptatum ducimus.</p>
+            </section>
+            <section id="weather">
+                <h2>Weather</h2>
+                <p>Temperature</p>
+                <p>Condition</p>
+            </section>
+        </div>
+        <section id="spotlights">
+            <h2>Member Spotlights</h2>
+            <img src="https://placehold.co/200x125.png?text=Spotlight+advertisement+1" alt="Company 1 logo">
+            <img src="https://placehold.co/200x125.png?text=Spotlight+advertisement+2" alt="Company 2 logo">
+            <img src="https://placehold.co/200x125.png?text=Spotlight+advertisement+3" alt="Company 3 logo">
+        </section>
+    </main>
+    <footer>
+        <div class="connections">
+            <section>
+                <h2>Follow Us</h2>
+            </section>
+            <section>
+                <h2>Contact Us</h2>
+                <p>(555) 555-5555</p>
+                <p>Company@email.com</p>
+                <p>1234 Address St</p>
+                <p>Daybreak, UT 84009</p>
+            </section>
+        </div>
+        <p>&copy;2024 | Chamber Project | Spencer Rejas | WDD230</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+</body>
+</html>

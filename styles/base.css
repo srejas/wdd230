@@ -38,6 +38,9 @@ header span {
     top: 1rem;
     right: 1rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
 }
 
 #dropdown-button {

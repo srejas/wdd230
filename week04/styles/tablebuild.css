@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    text-align: center;
+    margin: 1rem;
+    border-spacing: 0;
+}
+
+thead tr th:first-child {
+    border-top: 1px solid gray;
+    background-color: gold;
+}
+
+thead th:first-child, .blank {
+    border-left: 1px solid gray;
+}
+
+thead th, thead td {
+    padding: 1rem;
+}
+
+tbody th, tbody td {
+    padding: 0.5rem 1rem;
+}
+
+th, td {
+    border-bottom: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+tbody tr > th {
+    border-left: 1px solid gray;
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(0,0,0,0.1);
+}

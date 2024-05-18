@@ -1,0 +1,97 @@
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (min-width: 37rem) {
+    .evalForm {
+        padding: 0 2rem;
+    }
+}
+
+main, .evalForm {
+    margin: 2rem 0;
+}
+
+.evalForm {
+    max-width: 60rem;
+}
+
+.evalForm fieldset {
+    margin: 2rem;
+    border: 1px solid gray;
+}
+
+.evalForm fieldset, 
+.evalForm input[type='text'],
+.evalForm input[type='password'],
+.evalForm input[type='email'], 
+.evalForm input[type='range'], 
+.evalForm input[type="submit"] {
+    border-radius: 5px;
+}
+
+.evalForm legend {
+    padding: 0 0.5rem;
+    color: darkslategray;
+}
+
+.evalForm .astrisk {
+    color: indianred;
+}
+
+.evalForm label, 
+.evalForm input[type='text'],
+.evalForm input[type='password'],
+.evalForm input[type='email'], 
+.evalForm input[type='range'] {
+    display: block;
+}
+
+.evalForm label {
+    padding-top: 1rem;
+}
+
+.evalForm input[type='text'],
+.evalForm input[type='password'],
+.evalForm input[type='email'], 
+.evalForm input[type='range'] {
+    background-color: rgb(234, 234, 234);
+    padding: 0.75rem;
+    width: 100%;
+}
+
+.evalForm input[type='text'],
+.evalForm input[type='password'],
+.evalForm input[type='email'], 
+.evalForm input[type='range'], 
+.evalForm input[type="submit"] {
+    max-width: 400px;
+}
+
+.evalForm #errorMessage {
+    display: none;
+}
+
+.evalForm div {
+    margin: 0.75rem 0 0 0;
+    font-size: 2rem;
+}
+
+.evalForm input[type="submit"] {
+    background-image: linear-gradient(darksalmon, lightsalmon);
+    box-shadow: 1px 1px 4px #999;
+    text-shadow: 1px 1px 4px darkslategray;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    width: 80%;
+    margin: -1rem 45px 0 45px;
+}
+
+#thanksMessage {
+    margin: 1rem;
+    padding: 2rem;
+    text-align: center;
+}

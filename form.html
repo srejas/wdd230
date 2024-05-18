@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spencer Rejas - WDD 230 - Web Frontend Development Form</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development form page for Spencer Rejas">
+    <meta name="author" content="Spencer Rejas">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+    <link href="styles/form.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Spencer Rejas - WDD 230 Course Form">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://plus.unsplash.com/premium_photo-1688429241953-1ede1e26e71f?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://srejas.github.io/wdd230/form.html">
+</head>
+<body>
+    <header>
+        <img src="images/profile.webp" alt="Spencer Rejas profile" width="75" height="100"><span>Spencer Rejas</span>
+        <button id="darkMode">☾</button>
+    </header>
+    <nav>
+    <button id="dropdown-button"></button>
+        <ul class="dropdown-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Page Evaluation</h1>
+        <form method="get" action="record.html" class="evalForm">
+            <fieldset>
+                <legend>Account Information</legend>
+                <label>Username<span class="astrisk">*</span> <input type="text" id="username" name="username" required></label>
+                <label>Password<span class="astrisk">*</span> <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{6,}" required></label>
+                <label>Re-enter Password<span class="astrisk">*</span> <input type="password" id="rePassword" name="rePassword" required></label>
+                <div id="errorMessage"></div>
+                <label>Email<span class="astrisk">*</span> <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Score</legend>
+                <label>Page Rating:
+                    <div id="rating">7</div>
+                    <input type="range" id="ratingRange" name="ratingRange" min="1" max="10" value="7" step="1" list="ratingValues">
+                    <datalist id="ratingValues">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+                </label>
+            </fieldset>
+            <input type="submit" value="Rate Page">
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="footerDate">2024</span> | Spencer Rejas | Utah 🇺🇸</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/dropdownMenu.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/form.js"></script>
+</body>
+</html>

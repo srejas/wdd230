@@ -1,7 +1,7 @@
 :root {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    --input-background-color: rgb(234, 234, 234);
+    --astrisk-color: indianred;
+    --default-radius: 5px;
 }
 
 @media (min-width: 37rem) {
@@ -29,7 +29,7 @@ main, .evalForm {
 .evalForm input[type='email'], 
 .evalForm input[type='range'], 
 .evalForm input[type="submit"] {
-    border-radius: 5px;
+    border-radius: var(--default-radius);
 }
 
 .evalForm legend {
@@ -38,7 +38,7 @@ main, .evalForm {
 }
 
 .evalForm .astrisk {
-    color: indianred;
+    color: var(--astrisk-color);
 }
 
 .evalForm label, 
@@ -57,7 +57,7 @@ main, .evalForm {
 .evalForm input[type='password'],
 .evalForm input[type='email'], 
 .evalForm input[type='range'] {
-    background-color: rgb(234, 234, 234);
+    background-color: var(--input-background-color);
     padding: 0.75rem;
     width: 100%;
 }

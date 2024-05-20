@@ -23,7 +23,7 @@ header h1, .navigation a, main h2 {
     padding: 0.1rem;
 }
 
-header h1, #menu, .hero a, .connections {
+header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections {
     padding: 1rem;
 }
 
@@ -48,7 +48,7 @@ header h1, #menu, .hero a, .connections {
     padding: 0.75rem;
 }
 
-.navigation a, .navigation.open, .hero img, #spotlights img {
+.navigation a, .navigation.open, .hero img, #spotlights img, #pageMessage {
     display: block;
 }
 
@@ -66,7 +66,7 @@ header h1, #menu, .hero a, .connections {
     position: relative;
 }
 
-.hero img {
+.hero img, #six-pictures img {
     width: 100%;
     height: auto;
 }
@@ -81,11 +81,7 @@ header h1, #menu, .hero a, .connections {
     right: 3%;
 }
 
-footer {
-    color: var(--primary-color);
-}
-
-section {
+#events, #weather, #spotlights, #sidebar section {
     margin-top: 1rem;
     padding: 0 1rem;
 }
@@ -94,12 +90,8 @@ section {
     background-color: var(--primary-color);
 }
 
-.navigation a, #spotlights h2, #weather, footer {
+.navigation a, #spotlights h2, #pageMessage, #six-pictures figcaption, #weather, footer {
     text-align: center;
-}
-
-#spotlights img {
-    margin: 1rem auto;
 }
 
 main h2 {
@@ -111,8 +103,12 @@ main h3 {
     color: var(--accent-color-2);
 }
 
-main p, footer {
+.cards p, .discover-content p, #six-pictures figcaption, footer {
     padding: 0.5rem;
+}
+
+#spotlights img {
+    margin: 1rem auto;
 }
 
 .connections {
@@ -121,4 +117,5 @@ main p, footer {
 
 footer {
     background-color: var(--secondary-color);
+    color: var(--primary-color);
 }

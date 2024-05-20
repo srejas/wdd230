@@ -17,9 +17,20 @@
     }
 
     .cards {
-        display: grid;
         grid-template-columns: 2fr 1fr;
+    }
+
+    .cards, .discover-content {
+        display: grid;
         column-gap: 1rem;
+    }
+
+    .discover-content {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #six-pictures img:hover {
+        transform: scaleX(-1);
     }
 
     #weather {

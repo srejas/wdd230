@@ -56,7 +56,7 @@ header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections 
     border: solid 2px var(--accent-color-2);
 }
 
-.active {
+.active, #pageMessage {
     text-decoration: underline;
     text-decoration-color: var(--accent-color-1);
     text-underline-offset: 4px;

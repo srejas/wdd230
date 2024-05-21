@@ -43,7 +43,7 @@
             <fieldset>
                 <legend>Account Information</legend>
                 <label>Username<span class="astrisk">*</span> <input type="text" id="username" name="username" required></label>
-                <label>Password<span class="astrisk">*</span> <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{6,}" required></label>
+                <label>Password<span class="astrisk">*</span> <input type="password" id="password" name="password" pattern="[a-zA-Z0-9]{8,}" required></label>
                 <label>Re-enter Password<span class="astrisk">*</span> <input type="password" id="rePassword" name="rePassword" required></label>
                 <div id="errorMessage"></div>
                 <label>Email<span class="astrisk">*</span> <input type="email" id="email" name="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$" title="Please enter a valid email address" required></label>
@@ -51,7 +51,7 @@
             <fieldset>
                 <legend>Score</legend>
                 <label>Page Rating:
-                    <div id="rating">7</div>
+                    <span id="rating">7</span>
                     <input type="range" id="ratingRange" name="ratingRange" min="1" max="10" value="7" step="1" list="ratingValues">
                     <datalist id="ratingValues">
                         <option value="1">1</option>

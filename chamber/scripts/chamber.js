@@ -48,4 +48,4 @@ function DisplayMessage() {
 
 DisplayMessage();
 
-localStorage.setItem('lastVisit-ls', lastVisit);
+localStorage.setItem('lastVisit-ls', currentVisit);

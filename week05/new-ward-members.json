@@ -1,0 +1,13 @@
+{
+    "familyName": "Rejas",
+    "moveInDate": "November 5, 2023",
+    "nOfFamilyMembers": 1,
+    "visited": true,
+    "iFamilyMembers": [
+        {
+            "name": "Spencer Rejas",
+            "gender": "Male",
+            "birthdate": "October 18, 1993"
+        }
+    ]
+}

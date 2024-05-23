@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    color: darkslategray;
+}
+
+header, footer, h2, section {
+    text-align: center;
+}
+
+header, footer, h2, #cards {
+    margin: 1rem;
+}
+
+#cards {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5px;
+    box-shadow: 1px 1px 20px black;
+    background-color: darkgray;
+}
+
+section {
+    border: 1px solid darkslategray;
+    background-color: lightgray;
+}
+
+img {
+    margin: 0.5rem;
+    box-shadow: 1px 1px 15px black;
+}

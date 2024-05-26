@@ -1,0 +1,101 @@
+{
+    "weeks": [
+        {
+            "week": "Week 01",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "Holy Grail Layout"
+                },
+                {
+                    "url": "https://codepen.io/Srejas/pen/WNWmNYG",
+                    "title": "Applied JavaScript"
+                },
+                {
+                    "url": "week01/media-query.html",
+                    "title": "Media Queries"
+                }
+            ]
+        },
+        {
+            "week": "Week 02",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Design Principles"
+                },
+                {
+                    "url": "https://codepen.io/Srejas/pen/ExJqWLv",
+                    "title": "Hamburger Menu"
+                },
+                {
+                    "url": "week02/bom.html",
+                    "title": "Book of Mormon App"
+                }
+            ]
+        },
+        {
+            "week": "Week 03",
+            "links": [
+                {
+                    "url": "week03/images/landscape.webp",
+                    "title": "WebP"
+                },
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazy Load Page"
+                },
+                {
+                    "url": "week03/responsive-images.html",
+                    "title": "Responsive Image Page"
+                },
+                {
+                    "url": "week03/bom.html",
+                    "title": "Book of Mormon App (with storage)"
+                }
+            ]
+        },
+        {
+            "week": "Week 04",
+            "links": [
+                {
+                    "url": "https://codepen.io/Srejas/pen/abrOJMO",
+                    "title": "CSS Pseudo-Classes"
+                },
+                {
+                    "url": "week04/images/combinator-exercises.jpg",
+                    "title": "Combinator Excercise"
+                },
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "HTML Tables"
+                },
+                {
+                    "url": "week04/Form-start/index.html",
+                    "title": "Course Proposal Form"
+                }
+            ]
+        },
+        {
+            "week": "Week 05",
+            "links": [
+                {
+                    "url": "https://codepen.io/Srejas/pen/KKLzEOp",
+                    "title": "CSS Pseudo-elements"
+                },
+                {
+                    "url": "week05/new-ward-members.json",
+                    "title": "JSON Data"
+                },
+                {
+                    "url": "week05/prophets.html",
+                    "title": "LDS Prophets"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Weather Trier, Germany"
+                }
+            ]
+        }
+    ]
+}

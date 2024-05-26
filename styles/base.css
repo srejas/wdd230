@@ -16,7 +16,7 @@ header, footer, h2 {
     padding: 0.5rem;
 }
 
-header, #weather p {
+header, #info p {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -110,7 +110,7 @@ nav .active {
     padding: 0.5rem;
 }
 
-.hero span, #weather {
+.hero span, #info {
     text-align: center;
 }
 
@@ -143,7 +143,7 @@ div p {
     border-radius: 5px;
 }
 
-#weather span {
+#info span {
     padding: 0 0.25rem;
 }
 

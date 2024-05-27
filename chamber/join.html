@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 230 - Daybreak Chamber of Commerce Join Form</title>
+    <meta name="description" content="Join form for the Daybreak Chamber of Commerce website.">
+    <meta name="author" content="Spencer Rejas">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/base.css" rel="stylesheet">
+    <link href="styles/larger.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@300;500;900&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="WDD 230 - Join Daybreak Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1462900157664-3ecc405a9341?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="https://srejas.github.io/wdd230/chamber/join.html">
+</head>
+<body>
+    <header>
+        <h1>Daybreak Chamber of Commerce</h1>
+        <nav>
+            <button id="menu"></button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="#">Directory</a></li>
+                <li class="active"><a href="#">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2 id="join-h">Join The Chamber</h2>
+        <form method="get" action="thankyou.html" id="joinForm">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label>First Name<span class="astrisk">*</span> <input type="text" id="fname" name="fname" required></label>
+                <label>Last Name<span class="astrisk">*</span> <input type="text" id="lname" name="lname" required></label>
+                <label>Title/Position <input type="text" id="position" name="position" pattern="[a-zA-Z-\s]{7,}"></label>
+                <label>Email<span class="astrisk">*</span> <input type="email" id="email" name="email" placeholder="johndoe@yahoo.com" required></label>
+                <label>Mobile Phone Number<span class="astrisk">*</span> <input type="tel" id="phone" name="phone" required></label>
+            </fieldset>
+            <fieldset>
+                <legend>Membership</legend>
+                <label>Business/Organization<span class="astrisk">*</span> <input type="text" id="orgName" name="orgName" required></label>
+                <div>Membership Level</div>
+                <label class="level-radio"><input type="radio" name="mLevel" value="nonprofit">Non-Profit (No fee)</label>
+                <label class="level-radio"><input type="radio" name="mLevel" value="bronze">Bronze</label>
+                <label class="level-radio"><input type="radio" name="mLevel" value="silver">Silver</label>
+                <label class="level-radio"><input type="radio" name="mLevel" value="gold">Gold</label>
+                <label>Description of Business/Organization <textarea id="description" name="description" rows="4"></textarea></label>
+                <input type="hidden" id="timestamp" name="timestamp">
+            </fieldset>
+            <input type="submit" value="Join">
+        </form>
+    </main>
+    <footer>
+        <div class="connections">
+            <section>
+                <h2>Follow Us</h2>
+            </section>
+            <section>
+                <h2>Contact Us</h2>
+                <p>(555) 555-5555</p>
+                <p>Company@email.com</p>
+                <p>1234 Address St</p>
+                <p>Daybreak, UT 84009</p>
+            </section>
+        </div>
+        <p>&copy;2024 | Chamber Project | Spencer Rejas | WDD230</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+</body>
+</html>

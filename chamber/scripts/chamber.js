@@ -10,7 +10,7 @@ menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('open');
 });
 
-// Display message for time between visits
+// Display message for time between visits on the discover page
 let messageDisplay = document.querySelector('#pageMessage');
 
 const currentVisit = Date.now();
@@ -20,7 +20,7 @@ const oneDay = 84600000;
 const timeElapsed = currentVisit - lastVisit;
 const daysPast = Math.floor(timeElapsed / oneDay);
 
-function CreateMessage() {
+function createMessage() {
     let message;
 
     let dayOrDays = 'day'
@@ -42,10 +42,20 @@ function CreateMessage() {
     return message;
 }
 
-function DisplayMessage() {
-    messageDisplay.textContent = CreateMessage();
+function displayMessage() {
+    messageDisplay.textContent = createMessage();
 }
 
-DisplayMessage();
+if (document.querySelector('#pageMessage')) {
+    displayMessage();
+}
 
 localStorage.setItem('lastVisit-ls', currentVisit);
+
+// Add a timestamp value once the join page has loaded
+if (document.querySelector('#timestamp')) {
+    const timestampInput = document.querySelector('#timestamp');
+    const timestamp = new Date().toString();
+
+    timestampInput.value = timestamp;
+}

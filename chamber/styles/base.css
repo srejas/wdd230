@@ -4,7 +4,7 @@
 }
 
 :root {
-    --primary-color: #cbcbcd;
+    --primary-color: rgb(235, 235, 235);
     --secondary-color: #2a343c;
     --accent-color-1: #457604;
     --accent-color-2: #005c7a;
@@ -14,7 +14,9 @@ header h1 {
     text-align: left;
 }
 
-header h1, .navigation a, main h2 {
+header h1,
+.navigation a,
+main h2 {
     color: var(--secondary-color);
 }
 
@@ -23,7 +25,14 @@ header h1, .navigation a, main h2 {
     padding: 0.1rem;
 }
 
-header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections {
+header h1,
+#menu,
+#d-header,
+#join-h,
+#pageMessage,
+.hero a,
+#six-pictures,
+.connections {
     padding: 1rem;
 }
 
@@ -43,12 +52,26 @@ header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections 
     display: none;
 }
 
-.navigation a {
+.navigation a,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea {
     text-decoration: none;
     padding: 0.75rem;
 }
 
-.navigation a, .navigation.open, .hero img, #spotlights img, #pageMessage {
+.navigation a,
+.navigation.open,
+.hero img,
+#spotlights img,
+#pageMessage,
+#joinForm fieldset,
+#joinForm label,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea {
     display: block;
 }
 
@@ -66,7 +89,12 @@ header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections 
     position: relative;
 }
 
-.hero img, #six-pictures img {
+.hero img,
+#six-pictures img,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea {
     width: 100%;
     height: auto;
 }
@@ -76,21 +104,34 @@ header h1, #menu, #d-header, #pageMessage, .hero a, #six-pictures, .connections 
     background-color: var(--accent-color-2);
     color: white;
     text-decoration: none;
-    border-radius: 1rem;
     bottom: 4%;
     right: 3%;
 }
 
-#events, #weather, #spotlights, #sidebar section {
+#events,
+#weather,
+#spotlights,
+#sidebar section {
     margin-top: 1rem;
     padding: 0 1rem;
 }
 
-#weather {
+#weather,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea {
     background-color: var(--primary-color);
+    resize: none;
 }
 
-.navigation a, #spotlights h2, #pageMessage, #six-pictures figcaption, #weather, footer {
+.navigation a,
+#spotlights h2,
+#pageMessage,
+#six-pictures figcaption,
+#weather,
+#thanksMessage,
+footer {
     text-align: center;
 }
 
@@ -99,15 +140,97 @@ main h2 {
     padding: 1rem 0;
 }
 
+#join-h {
+    margin-bottom:-1rem;
+}
+
+#joinForm {
+    max-width: 60rem;
+}
+
+#joinForm fieldset{
+    margin: 2rem 1rem 0;
+    padding: 0 1rem 1rem;
+    border: 1px solid #cbcbcd;
+}
+
+.hero a,
+#joinForm fieldset,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea,
+#joinForm input[type='submit'] {
+    border-radius: 1rem;
+}
+
+#joinForm legend {
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-color-2);
+    font-size: 1.5rem;
+}
+
+#joinForm .astrisk {
+    color: maroon;
+}
+
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea,
+#joinForm input[type='submit'] {
+    max-width: 400px;
+    border: 1px solid var(--secondary-color);
+}
+
+#joinForm label,
+#joinForm div {
+    margin-top: 1.5rem;
+}
+
+#joinForm div {
+    font-size: 1.25rem;
+    color: var(--accent-color-2);
+}
+
+#joinForm .level-radio {
+    padding-top: 0.5rem;
+    margin-top: 0;
+}
+
+#joinForm input[type='radio'] {
+    margin-right: 5px;
+}
+
+#joinForm input[type='submit'] {
+    background-color: var(--accent-color-1);
+    color: white;
+    border: none;
+    margin: 2rem 2rem 1rem 2.1rem;
+    width: 82%;
+    font-size: 1.5rem;
+    box-shadow: 1px 1px 4px var(--secondary-color);
+}
+
 main h3 {
     color: var(--accent-color-2);
 }
 
-.cards p, .discover-content p, #six-pictures figcaption, footer {
+#joinForm input[type='submit'],
+.cards p,
+.discover-content p,
+#six-pictures figcaption,
+footer {
     padding: 0.5rem;
 }
 
-#spotlights img {
+#thanksMessage {
+    padding: 2rem;
+}
+
+#spotlights img,
+#thanksMessage {
     margin: 1rem auto;
 }
 

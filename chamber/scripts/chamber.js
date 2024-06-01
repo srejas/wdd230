@@ -11,7 +11,7 @@ menuButton.addEventListener('click', () => {
 });
 
 // Display message for time between visits on the discover page
-let messageDisplay = document.querySelector('#pageMessage');
+const messageDisplay = document.querySelector('#pageMessage');
 
 const currentVisit = Date.now();
 let lastVisit = Number(window.localStorage.getItem('lastVisit-ls')) || currentVisit;
@@ -58,4 +58,28 @@ if (document.querySelector('#timestamp')) {
     const timestamp = new Date().toString();
 
     timestampInput.value = timestamp;
+}
+
+// Display cards that show information for business members of the chamber
+const membersUrl = "https://srejas.github.io/wdd230/chamber/data/members.json"
+const businessCards = document.querySelector('#businessCards');
+
+async function getBusinessData() {
+    try {
+        const response = await fetch(membersUrl);
+        if (response.ok) {
+            const data = await response.json();
+            // displayBusinesses(data.businesses);
+            console.log(data.businesses);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+if (businessCards) {
+    getBusinessData();
 }

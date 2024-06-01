@@ -31,8 +31,8 @@
             "name": "Bloom Bloom Pow",
             "address": "4 Main St, South Jordan, UT 84009",
             "phoneNumber": "((555) 555-5554",
-            "siteUrl": "images/rose-logo-u.png",
-            "imageLogo": "https://www.bloombloompow.com/",
+            "siteUrl": "https://www.bloombloompow.com/",
+            "imageLogo": "images/rose-logo-u.png",
             "mLevel": "Silver",
             "joinDate": "October 20, 2015"
         },

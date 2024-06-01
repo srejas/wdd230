@@ -69,8 +69,8 @@ async function getBusinessData() {
         const response = await fetch(membersUrl);
         if (response.ok) {
             const data = await response.json();
-            // displayBusinesses(data.businesses);
-            console.log(data.businesses);
+            displayBusinesses(data.businesses);
+            // console.table(data.businesses);
         }
         else {
             throw Error(await response.text());
@@ -78,6 +78,47 @@ async function getBusinessData() {
     } catch(error) {
         console.log(error);
     }
+}
+
+const displayBusinesses = (businesses) => {
+    businesses.forEach((business) => {
+        let card = document.createElement('section');
+        let logo = document.createElement('img');
+        
+        logo.setAttribute('src', business.imageLogo);
+        logo.setAttribute('alt', `${business.name} logo`);
+        logo.setAttribute('loading', 'lazy');
+
+        logo.setAttribute('width', '200px');
+        logo.setAttribute('height', 'auto');
+
+
+        let name = document.createElement('p');
+        name.textContent = `${business.name}`;
+
+        let address = document.createElement('p');
+        address.textContent = `${business.address}`;
+
+        let phoneNumber = document.createElement('p');
+        phoneNumber.textContent = `${business.phoneNumber}`;
+
+        let website = document.createElement('a');
+        website.setAttribute('href', '#');
+        website.textContent = `${business.siteUrl}`;
+
+        let membershipInfo = document.createElement('p');
+        membershipInfo.setAttribute('id', 'membership-info')
+        membershipInfo.textContent = `${business.mLevel} member since ${business.joinDate}`;
+
+        card.appendChild(logo);
+        card.appendChild(name);
+        card.appendChild(address);
+        card.appendChild(phoneNumber);
+        card.appendChild(website);
+        card.appendChild(membershipInfo);
+
+        businessCards.appendChild(card);
+    })
 }
 
 if (businessCards) {

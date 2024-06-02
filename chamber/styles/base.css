@@ -22,15 +22,14 @@ main h2 {
     color: var(--secondary-color);
 }
 
-#menu::before {
+.menu::before {
     content: "☰";
     padding: 0.1rem;
 }
 
 header h1,
-#menu,
-#d-header,
-#join-h,
+.menu,
+.standard-header,
 #pageMessage,
 .hero a,
 #businessCards section,
@@ -39,17 +38,17 @@ header h1,
     padding: 1rem;
 }
 
-#menu {
+.menu {
     background: none;
     border: none;
 }
 
-#menu,
+.menu,
 #viewToggle button {
     cursor: pointer;
 }
 
-#menu.open::before {
+.menu.open::before {
     content: 'x';
     padding: 0.2rem;
 }
@@ -195,10 +194,6 @@ main h2 {
     padding: 1rem 0;
 }
 
-#join-h {
-    margin-bottom: -1rem;
-}
-
 #joinForm {
     max-width: 60rem;
 }
@@ -287,7 +282,7 @@ footer {
 }
 
 #thanksMessage {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 #businessCards,

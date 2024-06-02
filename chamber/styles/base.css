@@ -10,7 +10,9 @@
     --accent-color-2: #005c7a;
 }
 
-header h1 {
+header h1,
+#businessCards p,
+#businessCards a {
     text-align: left;
 }
 
@@ -31,6 +33,7 @@ header h1,
 #join-h,
 #pageMessage,
 .hero a,
+#businessCards section,
 #six-pictures,
 .connections {
     padding: 1rem;
@@ -39,6 +42,10 @@ header h1,
 #menu {
     background: none;
     border: none;
+}
+
+#menu,
+#viewToggle button {
     cursor: pointer;
 }
 
@@ -53,11 +60,19 @@ header h1,
 }
 
 .navigation a,
+#businessCards a,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
 #joinForm textarea {
     text-decoration: none;
+}
+
+.navigation a,
+#joinForm input[type='text'],
+#joinForm input[type='email'],
+#joinForm input[type='tel'],
+#joinForm textarea {
     padding: 0.75rem;
 }
 
@@ -65,6 +80,7 @@ header h1,
 .navigation.open,
 .hero img,
 #spotlights img,
+#businessCards a,
 #pageMessage,
 #joinForm fieldset,
 #joinForm label,
@@ -108,6 +124,42 @@ header h1,
     right: 3%;
 }
 
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list section{
+    max-width: 300px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: normal;
+}
+
+.grid section {
+    max-width: none;
+}
+
+#businessCards,
+#viewToggle {
+    gap: 1rem;
+}
+
+#viewToggle {
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+#viewToggle button,
+#businessCards section {
+    box-shadow: 1px 1px 6px var(--secondary-color);
+}
+
 #events,
 #weather,
 #spotlights,
@@ -127,6 +179,8 @@ header h1,
 
 .navigation a,
 #spotlights h2,
+#viewToggle,
+#businessCards,
 #pageMessage,
 #six-pictures figcaption,
 #weather,
@@ -135,13 +189,14 @@ footer {
     text-align: center;
 }
 
+
 main h2 {
     font-size: 3rem;
     padding: 1rem 0;
 }
 
 #join-h {
-    margin-bottom:-1rem;
+    margin-bottom: -1rem;
 }
 
 #joinForm {
@@ -167,7 +222,6 @@ main h2 {
 #joinForm legend {
     padding: 0 0.5rem;
     margin-bottom: 1rem;
-    color: var(--accent-color-2);
     font-size: 1.5rem;
 }
 
@@ -184,14 +238,18 @@ main h2 {
     border: 1px solid var(--secondary-color);
 }
 
+#membership-info,
 #joinForm label,
 #joinForm div {
     margin-top: 1.5rem;
 }
 
+#membership-info {
+    font-size: 0.75rem;
+}
+
 #joinForm div {
     font-size: 1.25rem;
-    color: var(--accent-color-2);
 }
 
 #joinForm .level-radio {
@@ -213,7 +271,10 @@ main h2 {
     box-shadow: 1px 1px 4px var(--secondary-color);
 }
 
-main h3 {
+main h3,
+#joinForm legend,
+#joinForm div,
+#businessCards a {
     color: var(--accent-color-2);
 }
 
@@ -229,9 +290,11 @@ footer {
     padding: 2rem;
 }
 
+#businessCards,
+#businessCards img,
 #spotlights img,
 #thanksMessage {
-    margin: 1rem auto;
+    margin: 1rem;
 }
 
 .connections {

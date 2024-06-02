@@ -70,7 +70,6 @@ async function getBusinessData() {
         if (response.ok) {
             const data = await response.json();
             displayBusinesses(data.businesses);
-            // console.table(data.businesses);
         }
         else {
             throw Error(await response.text());
@@ -88,10 +87,6 @@ const displayBusinesses = (businesses) => {
         logo.setAttribute('src', business.imageLogo);
         logo.setAttribute('alt', `${business.name} logo`);
         logo.setAttribute('loading', 'lazy');
-
-        logo.setAttribute('width', '200px');
-        logo.setAttribute('height', 'auto');
-
 
         let name = document.createElement('p');
         name.textContent = `${business.name}`;
@@ -118,9 +113,38 @@ const displayBusinesses = (businesses) => {
         card.appendChild(membershipInfo);
 
         businessCards.appendChild(card);
+
+        if (window.innerWidth > 511) {
+            businessCards.setAttribute('class', 'grid');
+        }
+        else {
+            businessCards.setAttribute('class', 'list');
+        }
     })
 }
 
 if (businessCards) {
     getBusinessData();
+}
+
+// Toggle between grid and list view in the directory page.
+const gridButton = document.querySelector('#grid-button');
+const listButton = document.querySelector('#list-button');
+
+if (businessCards) {
+    gridButton.addEventListener('click', () => {
+        businessCards.classList.add('grid');
+        businessCards.classList.remove('list');
+
+        gridButton.style.border = "3px solid var(--accent-color-1)";
+        listButton.style.border = "none";
+    })
+
+    listButton.addEventListener('click', () => {
+        businessCards.classList.add('list');
+        businessCards.classList.remove('grid');
+
+        listButton.style.border = "3px solid var(--accent-color-1)";
+        gridButton.style.border = "none";
+    })
 }

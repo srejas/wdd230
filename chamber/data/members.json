@@ -5,7 +5,7 @@
             "address": "1 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5551",
             "siteUrl": "https://www.pupnsuds.com/",
-            "imageLogo": "images/dog-logo-u.png",
+            "imageLogo": "images/dog-logo.webp",
             "mLevel": "Gold",
             "joinDate": "August 22, 2011"
         },
@@ -14,7 +14,7 @@
             "address": "2 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5552",
             "siteUrl": "https://www.gandgboutique.com/",
-            "imageLogo": "images/guy-girl-logo-u.png",
+            "imageLogo": "images/guy-girl-logo.webp",
             "mLevel": "Bronze",
             "joinDate": "April 4, 2003"
         },
@@ -23,7 +23,7 @@
             "address": "3 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5553",
             "siteUrl": "https://www.ricericebaby.com/",
-            "imageLogo": "images/lotus-logo-u.png",
+            "imageLogo": "images/lotus-logo.webp",
             "mLevel": "Bronze",
             "joinDate": "January 17, 2004"
         },
@@ -32,7 +32,7 @@
             "address": "4 Main St, South Jordan, UT 84009",
             "phoneNumber": "((555) 555-5554",
             "siteUrl": "https://www.bloombloompow.com/",
-            "imageLogo": "images/rose-logo-u.png",
+            "imageLogo": "images/rose-logo.webp",
             "mLevel": "Silver",
             "joinDate": "October 20, 2015"
         },
@@ -41,7 +41,7 @@
             "address": "5 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5555",
             "siteUrl": "https://www.birdword.org/",
-            "imageLogo": "images/bird-logo-u.png",
+            "imageLogo": "images/bird-logo.webp",
             "mLevel": "Non-Profit",
             "joinDate": "July 3, 2012"
         },
@@ -50,7 +50,7 @@
             "address": "6 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5556",
             "siteUrl": "https://www.yougogrill.com/",
-            "imageLogo": "images/fire-logo-u.png",
+            "imageLogo": "images/fire-logo.webp",
             "mLevel": "Gold",
             "joinDate": "July 4, 2021"
         },
@@ -59,7 +59,7 @@
             "address": "7 Main St, South Jordan, UT 84009",
             "phoneNumber": "(555) 555-5557",
             "siteUrl": "https://www.wreathon.com/",
-            "imageLogo": "images/wreath-logo-u.png",
+            "imageLogo": "images/wreath-logo.webp",
             "mLevel": "Gold",
             "joinDate": "November 30, 1999"
         }

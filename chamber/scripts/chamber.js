@@ -64,12 +64,12 @@ if (document.querySelector('#timestamp')) {
 const membersUrl = "https://srejas.github.io/wdd230/chamber/data/members.json"
 const businessCards = document.querySelector('#businessCards');
 
-async function getBusinessData() {
+async function getBusinessData(arrowFunction) {
     try {
         const response = await fetch(membersUrl);
         if (response.ok) {
             const data = await response.json();
-            displayBusinesses(data.businesses);
+            arrowFunction(data.businesses);
         }
         else {
             throw Error(await response.text());
@@ -124,7 +124,7 @@ const displayBusinesses = (businesses) => {
 }
 
 if (businessCards) {
-    getBusinessData();
+    getBusinessData(displayBusinesses);
 }
 
 // Toggle between grid and list view in the directory page.
@@ -147,4 +147,79 @@ if (businessCards) {
         listButton.style.border = "3px solid var(--accent-color-1)";
         gridButton.style.border = "none";
     })
+}
+
+// Get and display weather on the home page
+const currentWeather = document.querySelector('#current-weather');
+
+
+const key = 'aa65867bdf092012546af79f7f29f98e';
+const url = `https://api.openweathermap.org/data/2.5/weather?lat=40.51&lon=-112.03&units=imperial&appid=${key}`;
+
+async function getWeather() {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            displayWeather(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+function displayWeather(data) {
+    const weatherIcon = document.createElement('img');
+    const currentTemp = document.createElement('span');
+
+    weatherIcon.setAttribute('id', 'weather-icon');
+    weatherIcon.setAttribute('src', `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    weatherIcon.setAttribute('alt', `${data.weather[0].description} icon`);
+
+    currentTemp.setAttribute('id', 'current-temp');
+    currentTemp.innerHTML = `${Math.floor(data.main.temp)}&deg;F - ${data.weather[0].description}`;
+
+    currentWeather.appendChild(weatherIcon);
+    currentWeather.appendChild(currentTemp);
+}
+
+if (currentWeather) {
+    getWeather();
+}
+
+//Display gold and silver businesses in the "member spotlights" section of the hope page
+const businessSpotlights = document.querySelector('#membersDisplay');
+
+const spotlightMembers = (businesses) => {
+    const silverPlusMembers = businesses.filter((business) => business.mLevel === 'Silver' || business.mLevel === 'Gold');
+
+    for (let i = 0; i < 3; i++) {
+        let randomMember = Math.floor(Math.random() * silverPlusMembers.length);
+
+        const currentMember = silverPlusMembers[randomMember]
+
+        const figure = document.createElement('figure');
+        const memberLogo = document.createElement('img');
+
+        memberLogo.setAttribute('src', `${currentMember.imageLogo}`);
+        memberLogo.setAttribute('alt', `${currentMember.name} logo`);
+        memberLogo.setAttribute('loading', 'lazy');
+
+        const caption = document.createElement('figcaption');
+        caption.textContent = `${currentMember.name}`;
+
+        figure.appendChild(memberLogo);
+        figure.appendChild(caption);
+
+        businessSpotlights.appendChild(figure);
+
+        silverPlusMembers.splice(randomMember, 1);
+    }
+}
+
+if (businessSpotlights) {
+    getBusinessData(spotlightMembers);
 }

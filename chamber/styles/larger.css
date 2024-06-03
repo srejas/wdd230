@@ -43,9 +43,8 @@
         text-align: center;
     }
 
-    #spotlights img {
-        display: inline;
-        justify-content: space-around;
+    #membersDisplay {
+        flex-direction: row;
     }
 
     .connections {

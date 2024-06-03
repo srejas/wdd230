@@ -30,6 +30,8 @@ main h2 {
 header h1,
 .menu,
 .standard-header,
+#spotlights,
+#membersDisply,
 #pageMessage,
 .hero a,
 #businessCards section,
@@ -78,7 +80,6 @@ header h1,
 .navigation a,
 .navigation.open,
 .hero img,
-#spotlights img,
 #businessCards a,
 #pageMessage,
 #joinForm fieldset,
@@ -106,12 +107,17 @@ header h1,
 
 .hero img,
 #six-pictures img,
+#membersDisplay img,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
 #joinForm textarea {
     width: 100%;
     height: auto;
+}
+
+#membersDisplay img {
+    max-width: 100px;
 }
 
 .hero a {
@@ -123,14 +129,16 @@ header h1,
     right: 3%;
 }
 
-.list {
+.list,
+#membersDisplay {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.list section{
+.list section,
+#membersDisplay figure {
     max-width: 300px;
 }
 
@@ -161,7 +169,6 @@ header h1,
 
 #events,
 #weather,
-#spotlights,
 #sidebar section {
     margin-top: 1rem;
     padding: 0 1rem;
@@ -177,12 +184,12 @@ header h1,
 }
 
 .navigation a,
-#spotlights h2,
+figcaption,
+#membersDisplay,
 #viewToggle,
 #businessCards,
 #pageMessage,
-#six-pictures figcaption,
-#weather,
+#weather p,
 #thanksMessage,
 footer {
     text-align: center;
@@ -287,7 +294,8 @@ footer {
 
 #businessCards,
 #businessCards img,
-#spotlights img,
+#membersDisplay img,
+#membersDisplay figure,
 #thanksMessage {
     margin: 1rem;
 }

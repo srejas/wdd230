@@ -10,14 +10,14 @@
     --accent-color-2: #005c7a;
 }
 
-header h1,
+#businessCards a,
 #businessCards p,
-#businessCards a {
+header h1 {
     text-align: left;
 }
 
-header h1,
 .navigation a,
+header h1,
 main h2 {
     color: var(--secondary-color);
 }
@@ -27,16 +27,16 @@ main h2 {
     padding: 0.1rem;
 }
 
-header h1,
-.menu,
-.standard-header,
-#spotlights,
+#businessCards section,
 #membersDisply,
 #pageMessage,
-.hero a,
-#businessCards section,
 #six-pictures,
-.connections {
+#spotlights,
+.connections,
+.hero a,
+.menu,
+.standard-header,
+header h1 {
     padding: 1rem;
 }
 
@@ -45,8 +45,8 @@ header h1,
     border: none;
 }
 
-.menu,
-#viewToggle button {
+#viewToggle button,
+.menu {
     cursor: pointer;
 }
 
@@ -60,34 +60,34 @@ header h1,
     display: none;
 }
 
-.navigation a,
 #businessCards a,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
-#joinForm textarea {
+#joinForm textarea,
+.navigation a {
     text-decoration: none;
 }
 
-.navigation a,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
-#joinForm textarea {
+#joinForm textarea,
+.navigation a {
     padding: 0.75rem;
 }
 
-.navigation a,
-.navigation.open,
-.hero img,
 #businessCards a,
-#pageMessage,
 #joinForm fieldset,
 #joinForm label,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
-#joinForm textarea {
+#joinForm textarea,
+#pageMessage,
+.hero img,
+.navigation a,
+.navigation.open {
     display: block;
 }
 
@@ -95,7 +95,10 @@ header h1,
     border: solid 2px var(--accent-color-2);
 }
 
-.active, #pageMessage {
+#forecast p,
+#pageMessage,
+#weather h2 + p,
+.active {
     text-decoration: underline;
     text-decoration-color: var(--accent-color-1);
     text-underline-offset: 4px;
@@ -105,15 +108,21 @@ header h1,
     position: relative;
 }
 
-.hero img,
-#six-pictures img,
-#membersDisplay img,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
-#joinForm textarea {
+#joinForm textarea,
+#membersDisplay img,
+#six-pictures img,
+.hero img {
     width: 100%;
     height: auto;
+}
+
+#forecast section,
+#weather,
+.cards {
+    min-width: 0;
 }
 
 #membersDisplay img {
@@ -129,16 +138,30 @@ header h1,
     right: 3%;
 }
 
-.list,
-#membersDisplay {
+#forecast,
+#membersDisplay,
+#weather p,
+.list {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
-.list section,
-#membersDisplay figure {
+#membersDisplay,
+.list {
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#weather p {
+    justify-content: center;
+}
+
+#weather span {
+    margin: 0 0.25rem;
+}
+
+#membersDisplay figure,
+.list section {
     max-width: 300px;
 }
 
@@ -153,6 +176,7 @@ header h1,
 }
 
 #businessCards,
+#forecast,
 #viewToggle {
     gap: 1rem;
 }
@@ -162,35 +186,36 @@ header h1,
     margin: 2rem 0;
 }
 
-#viewToggle button,
-#businessCards section {
+#businessCards section,
+#viewToggle button {
     box-shadow: 1px 1px 6px var(--secondary-color);
 }
 
 #events,
-#weather,
-#sidebar section {
+#sidebar section,
+#weather {
     margin-top: 1rem;
     padding: 0 1rem;
 }
 
-#weather,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
-#joinForm textarea {
+#joinForm textarea,
+#weather {
     background-color: var(--primary-color);
     resize: none;
 }
 
-.navigation a,
-figcaption,
-#membersDisplay,
-#viewToggle,
 #businessCards,
+#forecast section,
+#membersDisplay,
 #pageMessage,
+#viewToggle,
 #weather p,
 #thanksMessage,
+.navigation a,
+figcaption,
 footer {
     text-align: center;
 }
@@ -211,13 +236,13 @@ main h2 {
     border: 1px solid #cbcbcd;
 }
 
-.hero a,
 #joinForm fieldset,
 #joinForm input[type='text'],
 #joinForm input[type='email'],
 #joinForm input[type='tel'],
 #joinForm textarea,
-#joinForm input[type='submit'] {
+#joinForm input[type='submit'],
+.hero a {
     border-radius: 1rem;
 }
 
@@ -240,9 +265,9 @@ main h2 {
     border: 1px solid var(--secondary-color);
 }
 
-#membership-info,
 #joinForm label,
-#joinForm div {
+#joinForm div,
+#membership-info {
     margin-top: 1.5rem;
 }
 
@@ -273,17 +298,18 @@ main h2 {
     box-shadow: 1px 1px 4px var(--secondary-color);
 }
 
-main h3,
+#businessCards a,
 #joinForm legend,
 #joinForm div,
-#businessCards a {
+main h3 {
     color: var(--accent-color-2);
 }
 
+#forecast section,
 #joinForm input[type='submit'],
+#six-pictures figcaption,
 .cards p,
 .discover-content p,
-#six-pictures figcaption,
 footer {
     padding: 0.5rem;
 }
@@ -294,6 +320,7 @@ footer {
 
 #businessCards,
 #businessCards img,
+#forecast section,
 #membersDisplay img,
 #membersDisplay figure,
 #thanksMessage {

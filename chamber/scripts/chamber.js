@@ -1,4 +1,4 @@
-// Last date modified script //
+// Last date modified script (all pages)//
 document.querySelector(".lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 // Drop down menu script //
@@ -10,7 +10,7 @@ menuButton.addEventListener('click', () => {
     menuButton.classList.toggle('open');
 });
 
-// Display message for time between visits on the discover page
+// Display message for time between visits (Discover page) //
 const messageDisplay = document.querySelector('#pageMessage');
 
 const currentVisit = Date.now();
@@ -52,7 +52,7 @@ if (document.querySelector('#pageMessage')) {
 
 localStorage.setItem('lastVisit-ls', currentVisit);
 
-// Add a timestamp value once the join page has loaded
+// Add a timestamp value once the page loads (Join page) //
 if (document.querySelector('#timestamp')) {
     const timestampInput = document.querySelector('#timestamp');
     const timestamp = new Date().toString();
@@ -60,16 +60,16 @@ if (document.querySelector('#timestamp')) {
     timestampInput.value = timestamp;
 }
 
-// Display cards that show information for business members of the chamber
+// Display cards that show information for business members of the chamber (Directory page) //
 const membersUrl = "https://srejas.github.io/wdd230/chamber/data/members.json"
 const businessCards = document.querySelector('#businessCards');
 
-async function getBusinessData(arrowFunction) {
+async function getBusinessData(businessFunction) {
     try {
         const response = await fetch(membersUrl);
         if (response.ok) {
             const data = await response.json();
-            arrowFunction(data.businesses);
+            businessFunction(data.businesses);
         }
         else {
             throw Error(await response.text());
@@ -127,70 +127,7 @@ if (businessCards) {
     getBusinessData(displayBusinesses);
 }
 
-// Toggle between grid and list view in the directory page.
-const gridButton = document.querySelector('#grid-button');
-const listButton = document.querySelector('#list-button');
-
-if (businessCards) {
-    gridButton.addEventListener('click', () => {
-        businessCards.classList.add('grid');
-        businessCards.classList.remove('list');
-
-        gridButton.style.border = "3px solid var(--accent-color-1)";
-        listButton.style.border = "none";
-    })
-
-    listButton.addEventListener('click', () => {
-        businessCards.classList.add('list');
-        businessCards.classList.remove('grid');
-
-        listButton.style.border = "3px solid var(--accent-color-1)";
-        gridButton.style.border = "none";
-    })
-}
-
-// Get and display weather on the home page
-const currentWeather = document.querySelector('#current-weather');
-
-
-const key = 'aa65867bdf092012546af79f7f29f98e';
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=40.51&lon=-112.03&units=imperial&appid=${key}`;
-
-async function getWeather() {
-    try {
-        const response = await fetch(url);
-        if (response.ok) {
-            const data = await response.json();
-            displayWeather(data);
-        }
-        else {
-            throw Error(await response.text());
-        }
-    } catch(error) {
-        console.log(error);
-    }
-}
-
-function displayWeather(data) {
-    const weatherIcon = document.createElement('img');
-    const currentTemp = document.createElement('span');
-
-    weatherIcon.setAttribute('id', 'weather-icon');
-    weatherIcon.setAttribute('src', `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
-    weatherIcon.setAttribute('alt', `${data.weather[0].description} icon`);
-
-    currentTemp.setAttribute('id', 'current-temp');
-    currentTemp.innerHTML = `${Math.floor(data.main.temp)}&deg;F - ${data.weather[0].description}`;
-
-    currentWeather.appendChild(weatherIcon);
-    currentWeather.appendChild(currentTemp);
-}
-
-if (currentWeather) {
-    getWeather();
-}
-
-//Display gold and silver businesses in the "member spotlights" section of the hope page
+//Display gold and silver businesses in the "member spotlights" section (Homepage) //
 const businessSpotlights = document.querySelector('#membersDisplay');
 
 const spotlightMembers = (businesses) => {
@@ -222,4 +159,102 @@ const spotlightMembers = (businesses) => {
 
 if (businessSpotlights) {
     getBusinessData(spotlightMembers);
+}
+
+// Toggle between grid and list view in the (Directory page) //
+const gridButton = document.querySelector('#grid-button');
+const listButton = document.querySelector('#list-button');
+
+if (businessCards) {
+    gridButton.addEventListener('click', () => {
+        businessCards.classList.add('grid');
+        businessCards.classList.remove('list');
+
+        gridButton.style.border = "3px solid var(--accent-color-1)";
+        listButton.style.border = "none";
+    })
+
+    listButton.addEventListener('click', () => {
+        businessCards.classList.add('list');
+        businessCards.classList.remove('grid');
+
+        listButton.style.border = "3px solid var(--accent-color-1)";
+        gridButton.style.border = "none";
+    })
+}
+
+// Get and display current weather (Homepage) //
+const currentWeather = document.querySelector('#current-weather');
+
+const key = 'aa65867bdf092012546af79f7f29f98e';
+const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=40.51&lon=-112.03&units=imperial&appid=${key}`;
+
+async function getWeather(weatherFunction, url) {
+    try {
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            weatherFunction(data);
+            // console.log(data);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    } catch(error) {
+        console.log(error);
+    }
+}
+
+function displayWeather(data) {
+    const weatherIcon = document.createElement('img');
+    const currentTemp = document.createElement('span');
+
+    weatherIcon.setAttribute('id', 'weather-icon');
+    weatherIcon.setAttribute('src', `https://openweathermap.org/img/w/${data.weather[0].icon}.png`);
+    weatherIcon.setAttribute('alt', `${data.weather[0].description} icon`);
+
+    currentTemp.setAttribute('id', 'current-temp');
+    currentTemp.innerHTML = `${Math.floor(data.main.temp)}&deg;F - ${data.weather[0].description}`;
+
+    currentWeather.appendChild(weatherIcon);
+    currentWeather.appendChild(currentTemp);
+}
+
+if (currentWeather) {
+    getWeather(displayWeather, weatherUrl);
+}
+
+// Get and display a 3-day forecast (Homepage) //
+const forecast = document.querySelector('#forecast');
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=40.51&lon=-112.03&units=imperial&appid=${key}`;
+
+function displayForecast(data) {
+    for (let i = 7; i <= 23; i += 8) {
+        const forecastCard = document.createElement('section');
+        const forecastDay = document.createElement('p');
+
+        let day = data.list[i];
+        let dayName = new Date(day.dt * 1000).toLocaleDateString('en-US', {weekday: 'long'})
+        forecastDay.textContent = `${dayName}`;
+
+        const forecastFigure = document.createElement('figure');
+        const forecastIcon = document.createElement('img');
+        forecastIcon.setAttribute('src', `https://openweathermap.org/img/w/${day.weather[0].icon}.png`);
+        forecastIcon.setAttribute('alt', `${day.weather[0].description} icon`);
+
+        const forecastTemp = document.createElement('figcaption');
+        forecastTemp.innerHTML = `${Math.floor(day.main.temp)}&deg;F - ${day.weather[0].description}`;
+
+        forecastFigure.appendChild(forecastIcon);
+        forecastFigure.appendChild(forecastTemp);
+
+        forecastCard.appendChild(forecastDay);
+        forecastCard.appendChild(forecastFigure);
+
+        forecast.appendChild(forecastCard);
+    }
+}
+
+if (forecast) {
+    getWeather(displayForecast, forecastUrl);
 }
